@@ -1,0 +1,33 @@
+.lineup {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: center;
+}
+
+.heroes {
+    width: 100vw;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card {
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    max-width: 1000px;
+    background-color: #1f0702;
+}
+
+.card-text {
+    font-size: 18px;
+    color: #ff974d;
+    background-color: #1f0702;
+}
+
+.note {
+    text-decoration: dotted underline;
+    color: #ff974d;
+    margin-left: auto;
+    margin-right: auto;
+}
