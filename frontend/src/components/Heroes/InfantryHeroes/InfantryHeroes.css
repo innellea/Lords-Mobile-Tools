@@ -16,18 +16,41 @@
     margin-right: auto;
     width: 50vw;
     max-width: 1000px;
-    background-color: #1f0702;
+    background-color: #1f120a;
+    border-bottom: 1px solid;
+    margin-bottom: 10%;
 }
 
+.card h2 {
+    text-align: left;
+}
 .card-text {
     font-size: 18px;
-    color: #ff974d;
-    background-color: #1f0702;
+    color: #e8b28b;
+    background-color: #1f120a;
 }
 
 .note {
     text-decoration: dotted underline;
-    color: #ff974d;
+
     margin-left: auto;
     margin-right: auto;
+}
+/* background : #1A0F08 */
+p {
+    color: #e8b28b;
+    margin-block-end: 0;
+}
+
+@media only screen and (max-width: 640px) {
+    img {
+        width: 100vw;
+    }
+    .card {
+        margin-top: 2vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100vw;
+        max-width: 1000px;
+    }
 }

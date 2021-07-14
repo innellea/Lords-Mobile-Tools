@@ -1,0 +1,33 @@
+﻿.footer {
+    background-color: inherit;
+    color: inherit;
+    justify-content: center;
+    text-align: center;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    list-style-type: none;
+    margin-bottom: 0.5em;
+    box-sizing: border-box;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+li {
+    list-style-type: none;
+}
+.title {
+    color: #fff;
+}
+
+.description {
+    color: #fff;
+}
+
+.footerlink,
+.footerlink:hover {
+    color: #fff;
+}
+
+ul {
+    padding-inline-start: 0;
+}

@@ -1,0 +1,71 @@
+.container {
+    color: #e4a703;
+    width: 100vw;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.table {
+    color: #e4a703;
+    font-size: 20px;
+    width: 100vw;
+    margin-top: 15px;
+}
+
+.table img {
+    width: 50%;
+}
+
+h2 {
+    margin-top: 25px;
+
+    -webkit-text-stroke: 1px #c59a22;
+}
+
+div.react-bootstrap-table > table > thead > tr > th:nth-child(7) {
+    width: 25%;
+}
+
+@media only screen and (max-width: 600px) {
+    .react-bootstrap-table table {
+        table-layout: auto;
+    }
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+.react-bootstrap-table table {
+    table-layout: auto;
+}
+
+.gear {
+    width: 100vw;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jewels-container {
+    width: 100vw;
+    max-width: 1200px;
+}
+
+.sets {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sets img {
+    width: 50vw;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vw;
+}

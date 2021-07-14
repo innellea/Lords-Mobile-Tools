@@ -1,0 +1,40 @@
+a:hover {
+    background: linear-gradient(
+        #d4ad46 0%,
+        #ecc14e 20%,
+        #ecc14e 80%,
+        #d4ad46 100%
+    );
+    background-color: #e7e7e7;
+    border-color: rgb(246, 228, 179) rgb(246, 228, 179) transparent;
+    color: #555555;
+    outline: 5px;
+    text-decoration: none;
+    padding: -55px;
+}
+a:focus {
+    background: #e4a703;
+    background-color: #d4ad46;
+    color: #555555;
+    outline: -webkit-focus-ring-color auto 5px;
+    outline-offset: -2px;
+    text-decoration: none;
+}
+a:active {
+    outline: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    #root > nav {
+        justify-content: flex-end;
+    }
+}
+
+button {
+}
+
+.nav-link {
+    color: #e4a703;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
