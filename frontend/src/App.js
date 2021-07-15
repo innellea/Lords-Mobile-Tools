@@ -1,6 +1,5 @@
-﻿import React from 'react';
-
-import 'bootstrap/dist/js/bootstrap.bundle';
+﻿/* eslint-disable no-unused-vars */
+import React from 'react';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -16,8 +15,7 @@ import Grid1 from './components/Grid1/Grid1';
 import Home from './components/Home/Home';
 import MasterDetail from './components/MasterDetail/MasterDetail';
 import NavBar from './components/NavBar/NavBar';
-import { InfantryHeroes } from './components/Heroes/InfantryHeroes/InfantryHeroes';
-//TODO Web Template Studio: Add routes for your new pages here.
+import { Heroes } from './components/Heroes/InfantryHeroes/Heroes';
 const App = () => {
     return (
         <React.Fragment>
@@ -31,7 +29,24 @@ const App = () => {
                 <Route path='/gear/ranged' component={RangedGear} />
                 <Route path='/gear/cavalry' component={CavalryGear} />
                 <Route path='/gear/mixed' component={MixedGear} />
-                <Route path='/heroes/infantry' component={InfantryHeroes} />
+                <Route
+                    path='/heroes/infantry'
+                    render={(props) => (
+                        <Heroes {...props} classType={'infantry'} />
+                    )}
+                />{' '}
+                <Route
+                    path='/heroes/infantry'
+                    render={(props) => (
+                        <Heroes {...props} classType={'ranged'} />
+                    )}
+                />{' '}
+                <Route
+                    path='/heroes/infantry'
+                    render={(props) => (
+                        <Heroes {...props} classType={'cavalry'} />
+                    )}
+                />
             </Switch>
             <Footer />
         </React.Fragment>

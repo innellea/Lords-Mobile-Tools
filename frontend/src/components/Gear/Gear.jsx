@@ -5,8 +5,6 @@ import BootstrapTable from 'react-bootstrap-table-next';
 
 import { isMobile } from 'react-device-detect';
 
-import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
-
 import { items } from '../Items/Items';
 
 import './Gear.css';

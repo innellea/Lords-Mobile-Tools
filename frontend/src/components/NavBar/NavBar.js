@@ -1,157 +1,95 @@
 ﻿import React from 'react';
 
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from 'react-bootstrap/Container';
+
 import './NavBar.css';
 const NavBar = () => {
     return (
-        <>
-            <nav className='navbar navbar-expand-lg navbar-inverse bg-inverse border-bottom border-warning'>
-                <button
-                    className='navbar-toggler navbar-toggler-right navbar-dark'
-                    type='button'
-                    data-toggle='collapse'
-                    data-target='#navbarSupportedContent'
-                    aria-controls='navbarSupportedContent'
-                    aria-expanded='false'
-                    aria-label='Toggle navigation'
-                >
-                    <span className='navbar-toggler-icon '></span>
-                </button>
+        <Navbar collapseOnSelect className='border' expand='lg'>
+            <Container>
+                <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+                <Navbar.Collapse id='responsive-navbar-nav'>
+                    <Nav className='me-auto'>
+                        <Nav.Link href='/'>Home</Nav.Link>
 
-                <div
-                    className='collapse navbar-collapse'
-                    id='navbarSupportedContent'
-                >
-                    <ul className='navbar-nav '>
-                        <li className='nav-item'>
-                            <a className='nav-link' href='/'>
-                                Home
-                            </a>
-                        </li>
-                        <li className='nav-item dropdown nav-item active '>
-                            <a
-                                className='nav-link dropdown-toggle '
-                                id='navbarDropdown'
-                                role='button'
-                                data-toggle='dropdown'
-                                aria-haspopup='true'
-                                aria-expanded='false'
-                            >
-                                Gear
-                            </a>
-                            <div
-                                className='dropdown-menu  '
-                                aria-labelledby='dropdownMenuButton'
-                            >
-                                <a
-                                    className='dropdown-item'
-                                    href='/gear/infantry'
-                                >
-                                    Infantry
-                                </a>
-                                <a
-                                    className='dropdown-item'
-                                    href='/gear/ranged'
-                                >
-                                    Ranged
-                                </a>
+                        <NavDropdown title='Gear' id='collasible-nav-dropdown'>
+                            <NavDropdown.Item href='/gear/infantry'>
+                                Infantry
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href='/gear/ranged'>
+                                Ranged
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href='/gear/cavalry'>
+                                Cavalry
+                            </NavDropdown.Item>
 
-                                <a
-                                    className='dropdown-item'
-                                    href='/gear/cavalry'
-                                >
-                                    Cavalry
-                                </a>
-                                <a className='dropdown-item' href='/gear/mixed'>
-                                    Mixed
-                                </a>
-                            </div>
-                        </li>
-                        <li className='nav-item dropdown '>
-                            <a
-                                className='nav-link dropdown-toggle'
-                                id='navbarDropdown'
-                                role='button'
-                                data-toggle='dropdown'
-                                aria-haspopup='true'
-                                aria-expanded='false'
-                            >
-                                Heroes
-                            </a>
-                            <div
-                                className='dropdown-menu'
-                                aria-labelledby='dropdownMenuButton'
-                            >
-                                <a
-                                    className='dropdown-item'
-                                    href='/heroes/infantry'
-                                >
-                                    Infantry
-                                </a>
-                                <a
-                                    className='dropdown-item'
-                                    href='/gear/ranged'
-                                >
-                                    Ranged
-                                </a>
+                            <NavDropdown.Item href='/gear/mixed'>
+                                Mixed
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href='/gear/mixed'>
+                                Mixed
+                            </NavDropdown.Item>
+                        </NavDropdown>
 
-                                <a
-                                    className='dropdown-item'
-                                    href='/gear/cavalry'
-                                >
-                                    Cavalry
-                                </a>
-                                <a className='dropdown-item' href='/gear/mixed'>
-                                    Mixed
-                                </a>
-                            </div>
-                        </li>
-                        <li className='nav-item'>
-                            <a className='nav-link' href='grid'>
-                                Familiars
-                            </a>
-                        </li>
-                        <li className='nav-item dropdown ' id='activeY'>
-                            <a
-                                className='nav-link dropdown-toggle'
-                                href='#'
-                                id='navbarDropdown'
-                                role='button'
-                                data-toggle='dropdown'
-                                aria-haspopup='true'
-                                aria-expanded='false'
-                            >
-                                Talents
-                            </a>
-                            <div
-                                className='dropdown-menu'
-                                aria-labelledby='navbarDropdown'
-                            >
-                                <a className='dropdown-item' href='#'>
-                                    Action
-                                </a>
-                                <a className='dropdown-item' href='#'>
-                                    Another action
-                                </a>
-                                <div className='dropdown-divider'></div>
-                                <a className='dropdown-item' href='#'>
-                                    Something else here
-                                </a>
-                            </div>
-                        </li>
-                        <li className='nav-item'>
-                            <a className='nav-link' href='grid'>
-                                Battle Strategies
-                            </a>
-                        </li>
-                        <li className='nav-item'>
-                            <a className='nav-link disabled' href='#'>
-                                Disabled
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </>
+                        <NavDropdown
+                            title='Heroes'
+                            id='collasible-nav-dropdown'
+                        >
+                            <NavDropdown.Item href='/heroes/infantry'>
+                                Infantry
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href='/heroes/ranged'>
+                                Ranged
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href='/heroes/cavalry'>
+                                Cavalry
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href='/heroes/mixed'>
+                                Mixed
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href='/heroes/mixed'>
+                                Mixed
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link href='/familiars'>Familiars</Nav.Link>
+                        <NavDropdown
+                            title='Talents'
+                            id='collasible-nav-dropdown'
+                        >
+                            <NavDropdown.Item href='/heroes/infantry'>
+                                Infantry
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href='/heroes/ranged'>
+                                Ranged
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href='/heroes/cavalry'>
+                                Cavalry
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href='/heroes/mixed'>
+                                Mixed
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href='/heroes/mixed'>
+                                Mixed
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link href='/'>Battle Strategies</Nav.Link>
+                    </Nav>
+
+                    <Nav>
+                        <Nav.Link href='#deets'>More deets</Nav.Link>
+                        <Nav.Link eventKey={2} href='#memes'>
+                            Dank memes
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 };
 export default NavBar;

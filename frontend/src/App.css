@@ -321,43 +321,6 @@ th {
     border-color: #f6e4b3;
 }
 
-.navbar {
-    background: -moz-linear-gradient(
-        left,
-        #261e19 0%,
-        #302620 25%,
-        #302620 75%,
-        #261e19 100%
-    );
-    background: -webkit-linear-gradient(
-        left,
-        #261e19 0%,
-        #302620 25%,
-        #302620 75%,
-        #261e19 100%
-    );
-    background: -ms-linear-gradient(
-        left,
-        #261e19 0%,
-        #302620 25%,
-        #302620 75%,
-        #261e19 100%
-    );
-    background: linear-gradient(
-        to right,
-        #261e19 0%,
-        #302620 25%,
-        #302620 75%,
-        #261e19 100%
-    );
-    border-radius: 0;
-    color: #e4a703;
-    background-color: #302620;
-    border-color: #302620;
-    border-bottom-color: #e4a703;
-    padding: 0;
-}
-
 .navbar-default .navbar-nav > .open > a,
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:focus,
