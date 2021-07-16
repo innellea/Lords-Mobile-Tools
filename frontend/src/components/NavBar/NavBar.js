@@ -48,12 +48,12 @@ const NavBar = () => {
                             <NavDropdown.Item href='/heroes/cavalry'>
                                 Cavalry
                             </NavDropdown.Item>
-                            <NavDropdown.Item href='/heroes/mixed'>
-                                Mixed
+                            <NavDropdown.Item href='/heroes/defense'>
+                            Fort & Wall Defense
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href='/heroes/mixed'>
-                                Mixed
+                            <NavDropdown.Item  eventKey="disabled" disabled href='/heroes/mixed'>
+                                In Development 
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href='/familiars'>Familiars</Nav.Link>
@@ -75,7 +75,7 @@ const NavBar = () => {
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href='/heroes/mixed'>
-                                Mixed
+                                In Development
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href='/'>Battle Strategies</Nav.Link>

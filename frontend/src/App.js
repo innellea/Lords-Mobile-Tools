@@ -1,5 +1,4 @@
-﻿/* eslint-disable no-unused-vars */
-import React from 'react';
+﻿import React from 'react';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -10,8 +9,6 @@ import CavalryGear from './components/Gear/CavalryGear';
 import InfantryGear from './components/Gear/InfantryGear';
 import MixedGear from './components/Gear/MixedGear';
 import RangedGear from './components/Gear/RangedGear';
-import Grid from './components/Grid/Grid';
-import Grid1 from './components/Grid1/Grid1';
 import Home from './components/Home/Home';
 import MasterDetail from './components/MasterDetail/MasterDetail';
 import NavBar from './components/NavBar/NavBar';
@@ -22,8 +19,6 @@ const App = () => {
             <NavBar />
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/Grid' component={Grid} />
-                <Route path='/Grid1' component={Grid1} />
                 <Route path='/MasterDetail' component={MasterDetail} />
                 <Route path='/gear/infantry' component={InfantryGear} />
                 <Route path='/gear/ranged' component={RangedGear} />
@@ -34,19 +29,24 @@ const App = () => {
                     render={(props) => (
                         <Heroes {...props} classType={'infantry'} />
                     )}
-                />{' '}
+                />
                 <Route
-                    path='/heroes/infantry'
+                    path='/heroes/ranged'
                     render={(props) => (
                         <Heroes {...props} classType={'ranged'} />
                     )}
                 />{' '}
                 <Route
-                    path='/heroes/infantry'
+                    path='/heroes/cavalry'
                     render={(props) => (
                         <Heroes {...props} classType={'cavalry'} />
                     )}
-                />
+                />    <Route
+                path='/heroes/defense'
+                render={(props) => (
+                    <Heroes {...props} classType={'defense'} />
+                )}
+            />
             </Switch>
             <Footer />
         </React.Fragment>

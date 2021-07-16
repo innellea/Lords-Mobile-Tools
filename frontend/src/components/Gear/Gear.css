@@ -13,7 +13,7 @@
 }
 
 .table img {
-    width: 50%;
+    width: 100px;
 }
 
 h2 {
@@ -27,7 +27,7 @@ div.react-bootstrap-table > table > thead > tr > th:nth-child(7) {
 }
 
 @media only screen and (max-width: 600px) {
-    .react-bootstrap-table table {
+    .react-bootstrap-table {
         table-layout: auto;
     }
     .container,
@@ -39,6 +39,10 @@ div.react-bootstrap-table > table > thead > tr > th:nth-child(7) {
         padding: 0;
         margin: 0;
         max-width: 100%;
+    }
+    table img {
+        visibility: hidden;
+        width: 0;
     }
 }
 

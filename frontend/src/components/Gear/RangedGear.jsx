@@ -2,8 +2,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
-// import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-
 import EndingNotes from '../EndingNotes/EndingNotes';
 import Jewels from '../Jewels/Jewels';
 
