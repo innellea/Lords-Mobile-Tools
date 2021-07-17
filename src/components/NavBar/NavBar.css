@@ -23,7 +23,9 @@ a:focus {
 a:active {
     outline: 5px;
 }
-
+.custom-toggler.navbar-toggler {
+    color: white;
+}
 @media only screen and (max-width: 600px) {
     #root > nav {
         justify-content: flex-end;

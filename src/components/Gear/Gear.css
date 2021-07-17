@@ -40,10 +40,6 @@ div.react-bootstrap-table > table > thead > tr > th:nth-child(7) {
         margin: 0;
         max-width: 100%;
     }
-    table img {
-        visibility: hidden;
-        width: 0;
-    }
 }
 
 .react-bootstrap-table table {
