@@ -1,4 +1,4 @@
-﻿import React from 'react';
+﻿import React, { Suspense } from 'react';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -20,34 +20,36 @@ const App = () => {
             <NavBar />
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/gear/infantry' component={InfantryGear} />
-                <Route path='/gear/ranged' component={RangedGear} />
-                <Route path='/gear/cavalry' component={CavalryGear} />
-                <Route path='/gear/mixed' component={MixedGear} />
-                <Route
-                    path='/heroes/infantry'
-                    render={(props) => (
-                        <Heroes {...props} classType={'infantry'} />
-                    )}
-                />
-                <Route
-                    path='/heroes/ranged'
-                    render={(props) => (
-                        <Heroes {...props} classType={'ranged'} />
-                    )}
-                />{' '}
-                <Route
-                    path='/heroes/cavalry'
-                    render={(props) => (
-                        <Heroes {...props} classType={'cavalry'} />
-                    )}
-                />{' '}
-                <Route
-                    path='/heroes/defense'
-                    render={(props) => (
-                        <Heroes {...props} classType={'defense'} />
-                    )}
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Route path='/gear/infantry' component={InfantryGear} />
+                    <Route path='/gear/ranged' component={RangedGear} />
+                    <Route path='/gear/cavalry' component={CavalryGear} />
+                    <Route path='/gear/mixed' component={MixedGear} />
+                    <Route
+                        path='/heroes/infantry'
+                        render={(props) => (
+                            <Heroes {...props} classType={'infantry'} />
+                        )}
+                    />
+                    <Route
+                        path='/heroes/ranged'
+                        render={(props) => (
+                            <Heroes {...props} classType={'ranged'} />
+                        )}
+                    />{' '}
+                    <Route
+                        path='/heroes/cavalry'
+                        render={(props) => (
+                            <Heroes {...props} classType={'cavalry'} />
+                        )}
+                    />{' '}
+                    <Route
+                        path='/heroes/defense'
+                        render={(props) => (
+                            <Heroes {...props} classType={'defense'} />
+                        )}
+                    />
+                </Suspense>
             </Switch>
             <Footer />
         </React.Fragment>
