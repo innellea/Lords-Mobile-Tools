@@ -4,18 +4,25 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
-
 import './NavBar.css';
+import { FaBars } from 'react-icons/fa';
+
 const NavBar = () => {
     return (
         <Navbar collapseOnSelect className='border' expand='lg'>
             <Container>
-                <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+                <Navbar.Toggle
+                    aria-controls='responsive-navbar-nav '
+                    className=' custom-toggler navbar-toggler'
+                >
+                    <FaBars />
+                </Navbar.Toggle>
+
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className='me-auto'>
                         <Nav.Link href='/'>Home</Nav.Link>
 
-                        <NavDropdown title='Gear' id='collasible-nav-dropdown'>
+                        <NavDropdown title='Gear' id='collapsible-nav-dropdown'>
                             <NavDropdown.Item href='/gear/infantry'>
                                 Infantry
                             </NavDropdown.Item>
@@ -49,11 +56,15 @@ const NavBar = () => {
                                 Cavalry
                             </NavDropdown.Item>
                             <NavDropdown.Item href='/heroes/defense'>
-                            Fort & Wall Defense
+                                Fort & Wall Defense
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item  eventKey="disabled" disabled href='/heroes/mixed'>
-                                In Development 
+                            <NavDropdown.Item
+                                eventKey='disabled'
+                                disabled
+                                href='/heroes/mixed'
+                            >
+                                In Development
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href='/familiars'>Familiars</Nav.Link>
