@@ -49,7 +49,7 @@ export const Gear = (props) => {
                         Items
                     </h2>
                     <BootstrapTable
-                        keyField='id'
+                        keyField={'id'}
                         data={items[`${props.classType}`][`${slotType}`]}
                         columns={columns}
                         bootstrap4
