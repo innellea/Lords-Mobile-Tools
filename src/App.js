@@ -10,7 +10,6 @@ import InfantryGear from './components/Gear/InfantryGear';
 import MixedGear from './components/Gear/MixedGear';
 import RangedGear from './components/Gear/RangedGear';
 import Home from './components/Home/Home';
-import MasterDetail from './components/MasterDetail/MasterDetail';
 import NavBar from './components/NavBar/NavBar';
 import { Heroes } from './components/Heroes/InfantryHeroes/Heroes';
 const App = () => {
@@ -19,7 +18,6 @@ const App = () => {
             <NavBar />
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/MasterDetail' component={MasterDetail} />
                 <Route path='/gear/infantry' component={InfantryGear} />
                 <Route path='/gear/ranged' component={RangedGear} />
                 <Route path='/gear/cavalry' component={CavalryGear} />
@@ -41,12 +39,13 @@ const App = () => {
                     render={(props) => (
                         <Heroes {...props} classType={'cavalry'} />
                     )}
-                />    <Route
-                path='/heroes/defense'
-                render={(props) => (
-                    <Heroes {...props} classType={'defense'} />
-                )}
-            />
+                />{' '}
+                <Route
+                    path='/heroes/defense'
+                    render={(props) => (
+                        <Heroes {...props} classType={'defense'} />
+                    )}
+                />
             </Switch>
             <Footer />
         </React.Fragment>

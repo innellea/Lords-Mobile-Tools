@@ -1,11 +1,11 @@
 // Get the modal
-var modal = document.getElementById('myModal');
+const modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById('myBtn');
+const btn = document.getElementById('myBtn');
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName('close')[0];
+const span = document.getElementsByClassName('close')[0];
 
 // When the user clicks the button, open the modal
 btn.onclick = function () {
@@ -24,7 +24,7 @@ window.onclick = function (event) {
     }
 };
 //$('.caption2').tooltip(options);
-$(document).ready(function () {
+$(document).ready(() => {
     //updateCost();
     initItems();
 });
@@ -144,7 +144,7 @@ $('.captionm,.caption2,.caption3').on('click', function () {
     console.log('Handler for .click() called.');
     e = $(this);
     //console.log(e);
-    var item = e.parent();
+    const item = e.parent();
     if (item.val()) {
         console.log('current: ' + item.val());
         if (item.val() < researches[item.attr('id')].length - 1) {
@@ -156,7 +156,7 @@ $('.captionm,.caption2,.caption3').on('click', function () {
                 'captionm id:' + item.attr('id') + ' val:' + item.val()
             );
             if (item.val() < researches[item.attr('id')].length - 1) {
-                var time =
+                const time =
                     researches[item.attr('id')][Number(item.val()) + 1][7];
                 //console.log("inside if time: "+convertTimeShort(calcTS(time)));
                 item.find('.caption2').text(convertTimeShort(calcTS(time)));
@@ -190,7 +190,7 @@ $('.captionl').on('click', function () {
     console.log('Handler for .click() called.');
     e = $(this);
     //console.log(e);
-    var item = e.parent();
+    const item = e.parent();
     if (item.val()) {
         console.log('current: ' + item.val());
         if (item.val() > 0) {
@@ -205,17 +205,17 @@ $('.captionl').on('click', function () {
 
 function updateDepen($item) {
     for (
-        var counter = 8;
+        let counter = 8;
         researches[$item.attr('id')][$item.val()][counter];
         counter += 2
     ) {
-        var dependency = researches[$item.attr('id')][$item.val()][counter];
+        const dependency = researches[$item.attr('id')][$item.val()][counter];
         if (dependency) {
-            var dependencyVal =
+            const dependencyVal =
                 researches[$item.attr('id')][$item.val()][counter + 1];
             //var itemDep = $("#"+dependency);
             //var itemDep = $("#"+dependency.replaceAll(" ","\\ "));
-            var itemDep = $('#' + dependency.replace(/ /g, '\\ '));
+            const itemDep = $('#' + dependency.replace(/ /g, '\\ '));
             //console.log("dependency:"+dependency.replaceAll(" ","\\ ")+" itemDep.val():"+itemDep.val()+" itemDep.attr(id):"+itemDep.attr("id"));
             console.log(itemDep);
             if (itemDep.val() < dependencyVal) {
@@ -230,7 +230,7 @@ function updateDepen($item) {
                             (researches[itemDep.attr('id')].length - 1)
                     );
                 if (itemDep.val() < researches[itemDep.attr('id')].length - 1) {
-                    var time =
+                    const time =
                         researches[itemDep.attr('id')][
                             Number(itemDep.val()) + 1
                         ][7];

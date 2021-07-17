@@ -8,9 +8,8 @@ const Home = () => {
                 <div className='jumbotron center-text'>
                     <h1>Lords Mobile Tools</h1>
                     <h3 className='middle center'>
-                        View and filter PvP leaderboards or see which talents,
-                        covenants, soulbinds, conduits, stats, and gear top WoW
-                        PvPers are selecting.
+                        View and filter Heroes or see which talents, and gear
+                        top Lords Mobile players are selecting.
                     </h3>
                 </div>
             </div>
