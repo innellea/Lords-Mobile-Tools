@@ -7,11 +7,13 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import CavalryGear from './components/Gear/CavalryGear';
 import InfantryGear from './components/Gear/InfantryGear';
-import MixedGear from './components/Gear/MixedGear';
-import RangedGear from './components/Gear/RangedGear';
+
 import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
-import { Heroes } from './components/Heroes/InfantryHeroes/Heroes';
+const Heroes = React.lazy(() => import('./components/Heroes/Heroes'));
+const MixedGear = React.lazy(() => import('./components/Gear/MixedGear'));
+const RangedGear = React.lazy(() => import('./components/Gear/RangedGear'));
+
 const App = () => {
     return (
         <React.Fragment>
