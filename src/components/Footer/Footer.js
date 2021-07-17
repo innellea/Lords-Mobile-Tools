@@ -8,7 +8,7 @@ const Footer = () => {
             <ul>
                 <li>
                     Created by
-                    <a href='https://twitter.com/'>@innellea</a>
+                    <a href='https://github.com/innellea/'>@innellea</a>
                 </li>
                 <li>
                     Lords Mobile is a trademark or registered trademark of{' '}
