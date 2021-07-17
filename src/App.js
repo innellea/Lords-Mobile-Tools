@@ -5,14 +5,14 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Footer from './components/Footer/Footer';
-import CavalryGear from './components/Gear/CavalryGear';
-import InfantryGear from './components/Gear/InfantryGear';
 
 import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 const Heroes = React.lazy(() => import('./components/Heroes/Heroes'));
 const MixedGear = React.lazy(() => import('./components/Gear/MixedGear'));
 const RangedGear = React.lazy(() => import('./components/Gear/RangedGear'));
+const CavalryGear = React.lazy(() => import('./components/Gear/CavalryGear'));
+const InfantryGear = React.lazy(() => import('./components/Gear/InfantryGear'));
 
 const App = () => {
     return (
