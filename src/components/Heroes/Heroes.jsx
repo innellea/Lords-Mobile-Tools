@@ -147,9 +147,7 @@ const Heroes = (props) => {
                             hero
                         </p>
                     </div>
-                    {/* <div className=' lineup mb-5 '>
-                  <h2 classNmae='display-4'>Recommended Infantry Lineups</h2>
-              </div> */}
+
                     <div className='hero-lineup'>
                         <h2>Lineup with 11k heroes</h2>
                         <div className='card'>
@@ -471,7 +469,7 @@ const Heroes = (props) => {
                         <BootstrapTable
                             keyField='id'
                             data={heroesList.fortWallDefense}
-                            columns={columns}
+                            columns={columnsDef}
                             bootstrap4
                             wrapperClasses='table-responsive'
                             bordered={true}
@@ -482,7 +480,31 @@ const Heroes = (props) => {
         );
     }
 };
+
 const columns = [
+    {
+        dataField: 'id',
+        text: 'Rank',
+    },
+    {
+        dataField: 'Heroes',
+        text: 'Heroes',
+    },
+    {
+        dataField: 'ATK',
+        text: 'ATK',
+    },
+    {
+        dataField: 'HP',
+        text: 'HP',
+    },
+    {
+        dataField: 'DEF',
+        text: 'DEF',
+    },
+];
+
+const columnsDef = [
     {
         dataField: 'id',
         text: 'Rank',
