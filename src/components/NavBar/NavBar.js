@@ -4,8 +4,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
-import './NavBar.css';
+
 import { FaBars } from 'react-icons/fa';
+
+import './NavBar.css';
 
 const NavBar = () => {
     return (
@@ -90,13 +92,6 @@ const NavBar = () => {
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href='/'>Battle Strategies</Nav.Link>
-                    </Nav>
-
-                    <Nav>
-                        <Nav.Link href='#deets'>More deets</Nav.Link>
-                        <Nav.Link eventKey={2} href='#memes'>
-                            Dank memes
-                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
