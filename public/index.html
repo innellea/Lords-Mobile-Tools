@@ -25,10 +25,7 @@
   <meta name="apple-mobile-web-app-title" content="Lords Mobile Tools" />
   <meta name="msapplication-starturl" content="/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <script async src="https://cdn.jsdelivr.net/npm/pwacompat" crossorigin="anonymous"></script>
   <!-- or another CDN -->
-  <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -44,15 +41,7 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <script>
-    // Check that service workers are supported
-    if ('serviceWorker' in navigator) {
-      // Use the window load event to keep the page load performant
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js');
-      });
-    }
-  </script>
+
   <div id="root"></div>
   <!--
       This HTML file is a template.
