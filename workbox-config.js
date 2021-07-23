@@ -1,11 +1,7 @@
 module.exports = {
-	globDirectory: 'public/',
-	globPatterns: [
-		'**/*.{png,ico,html,json,txt,js,css}'
-	],
-	ignoreURLParametersMatching: [
-		/^utm_/,
-		/^fbclid$/
-	],
-	swDest: 'public/sw.js'
+    globDirectory: 'build/',
+    globPatterns: ['**/*.{html,json,js,css}'],
+    swDest: 'build/sw.js',
+    cleanupOutdatedCaches: true,
+    // Define runtime caching rules.
 };
