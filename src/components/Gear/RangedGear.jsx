@@ -4,7 +4,6 @@ import React from 'react';
 
 import EndingNotes from '../EndingNotes/EndingNotes';
 import Jewels from '../Jewels/Jewels';
-
 import { Gear } from './Gear';
 
 export const RangedGear = () => {

@@ -2,8 +2,7 @@
 
 import styles from './Footer.module.css';
 
-const Footer = () => {
-    return (
+const Footer = () => (
         <footer className={styles.footer}>
             <ul>
                 <li>
@@ -20,5 +19,4 @@ const Footer = () => {
             </ul>
         </footer>
     );
-};
 export default Footer;

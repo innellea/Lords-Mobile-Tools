@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+import './Heroes.css';
+
+import React from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
 
 import { heroesList } from './heroesList';
 
-import './Heroes.css';
 const Heroes = (props) => {
     const { classType } = props;
 
@@ -125,7 +125,7 @@ const Heroes = (props) => {
                             columns={columns}
                             bootstrap4
                             wrapperClasses='table-responsive'
-                            bordered={true}
+                            bordered
                         />
                     </div>
                 </div>
@@ -241,7 +241,7 @@ const Heroes = (props) => {
                             columns={columns}
                             bootstrap4
                             wrapperClasses='table-responsive'
-                            bordered={true}
+                            bordered
                         />
                     </div>
                 </div>
@@ -359,7 +359,7 @@ const Heroes = (props) => {
                             columns={columns}
                             bootstrap4
                             wrapperClasses='table-responsive'
-                            bordered={true}
+                            bordered
                         />
                     </div>
                 </div>
@@ -472,7 +472,7 @@ const Heroes = (props) => {
                             columns={columnsDef}
                             bootstrap4
                             wrapperClasses='table-responsive'
-                            bordered={true}
+                            bordered
                         />
                     </div>
                 </div>

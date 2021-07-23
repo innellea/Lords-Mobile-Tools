@@ -1,13 +1,12 @@
-import React from 'react';
-
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import BootstrapTable from 'react-bootstrap-table-next';
+import './Gear.css';
 
+import React from 'react';
+import BootstrapTable from 'react-bootstrap-table-next';
 import { isMobile } from 'react-device-detect';
 
 import { items } from '../Items/Items';
 
-import './Gear.css';
 if (isMobile) {
     require('./mobile.css');
 }
@@ -25,8 +24,7 @@ export const Gear = (props) => {
         props.classType == 'ranged' ||
         props.classType == 'cavalry'
     ) {
-        return itemPool.map((slotType) => {
-            return (
+        return itemPool.map((slotType) => (
                 <div
                     key={items.infantry[`${slotType}`].id}
                     className=' container pt-5'
@@ -49,20 +47,18 @@ export const Gear = (props) => {
                         Items
                     </h2>
                     <BootstrapTable
-                        keyField={'id'}
+                        keyField="id"
                         data={items[`${props.classType}`][`${slotType}`]}
                         columns={columns}
                         bootstrap4
                         wrapperClasses='table-responsive'
-                        bordered={true}
+                        bordered
                     />
                 </div>
-            );
-        });
+            ));
     }
     if (props.classType == 'mixed') {
-        return itemPool.map((slotType) => {
-            return (
+        return itemPool.map((slotType) => (
                 <div
                     key={items.infantry[`${slotType}`].id}
                     className='container pt-5'
@@ -94,8 +90,7 @@ export const Gear = (props) => {
                     />
                     {/* <Notes type={`${slotType}`} /> */}
                 </div>
-            );
-        });
+            ));
     }
 };
 

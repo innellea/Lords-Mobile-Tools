@@ -1,12 +1,12 @@
-﻿import React from "react";
-import classnames from "classnames";
-import styles from "./WarningMessage.module.css";
+﻿import classnames from "classnames";
 import PropTypes from "prop-types";
+import React from "react";
+
+import styles from "./WarningMessage.module.css";
 
 // A pop up message used to warn users about failed API calls to the back end
-const WarningMessage = ({ open, text, onWarningClose }) => {
-  return (
-    <React.Fragment>
+const WarningMessage = ({ open, text, onWarningClose }) => (
+    <>
       {open && (
         <div
           className={classnames(
@@ -27,9 +27,8 @@ const WarningMessage = ({ open, text, onWarningClose }) => {
           </button>
         </div>
       )}
-    </React.Fragment>
-  );
-}
+    </>
+  )
 
 WarningMessage.propTypes = {
   open: PropTypes.bool,

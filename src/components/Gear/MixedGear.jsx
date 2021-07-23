@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+import './Gear.css';
+
+import React from 'react';
 
 import EndingNotes from '../EndingNotes/EndingNotes';
 import Jewels from '../Jewels/Jewels';
-
 import { Gear } from './Gear';
-import './Gear.css';
+
 export const MixedGear = () => {
     const classType = 'mixed';
     const reqType = 'gear';

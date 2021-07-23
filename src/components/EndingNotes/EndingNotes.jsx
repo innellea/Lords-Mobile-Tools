@@ -6,7 +6,7 @@ import { endNotes } from '../Items/Items';
 const EndingNotes = (props) => {
     const { classType, reqType } = props;
 
-    if (reqType == 'gear') {
+    if (reqType === 'gear') {
         return (
             <div className='ending-note container pt-5'>
                 <h2> Ending Notes: </h2>
@@ -14,6 +14,7 @@ const EndingNotes = (props) => {
             </div>
         );
     }
+    return 'unknown';
 };
 
 export default EndingNotes;

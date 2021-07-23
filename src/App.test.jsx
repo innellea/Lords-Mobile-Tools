@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 ﻿/* eslint-disable eslint-comments/disable-enable-pair */
 /* eslint-disable testing-library/await-async-query */
 import React, { render, screen } from "@testing-library/react";
+=======
+﻿import React, { render, screen } from "@testing-library/react";
+>>>>>>> Stashed changes
 import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";

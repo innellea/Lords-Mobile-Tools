@@ -1,7 +1,7 @@
-﻿import React from 'react';
-
+﻿/* eslint-disable eslint-comments/disable-enable-pair */
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
@@ -11,7 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
         <App />
     </BrowserRouter>,
-    document.getElementById('root')
+    document.querySelector('#root')
 );
 
 // If you want to start measuring performance in your app, pass a function

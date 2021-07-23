@@ -2,6 +2,7 @@
 import React from 'react';
 
 import { jewels } from '../Items/Items';
+
 const Jewels = (props) => {
     const jewelRedirect = () => {
         window.location = 'https://lordsmobile.fandom.com/wiki/Jewel';
@@ -30,6 +31,7 @@ const Jewels = (props) => {
                             className=''
                             style={{ width: '100px', cursor: 'pointer' }}
                             src={item.url}
+                            alt="jewels"
                         />
                         <h5 className='pt-2'>{item.effects.join(' / ')}</h5>
                     </div>
