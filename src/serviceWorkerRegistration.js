@@ -10,9 +10,6 @@
 
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://cra.link/PWA
-importScripts(
-    'https://storage.googleapis.com/workbox-cdn/releases/6.1.5/workbox-sw.js'
-);
 
 const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
@@ -24,22 +21,6 @@ const isLocalhost = Boolean(
         )
 );
 
-if (workbox) {
-    console.log(`Yay! Workbox is loaded 🎉`);
-} else {
-    console.log(`Boo! Workbox didn't load 😬`);
-}
-workbox.skipWaiting();
-workbox.clientsClaim();
-
-workbox.routing.registerRoute(
-    new RegExp('https://.*'),
-    workbox.strategies.staleWhileRevalidate({
-        cacheName: 'cdn-cache',
-    })
-);
-
-workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 
 export function register(config) {
     if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
